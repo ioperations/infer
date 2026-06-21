@@ -98,6 +98,8 @@ val bad_return : latent:bool -> t
 
 val block_parameter_not_null_checked : t
 
+val bool_function_naming : t
+
 val buffer_overrun_l1 : t
 
 val buffer_overrun_l2 : t

@@ -16,6 +16,7 @@ type t =
   | ConfigImpactAnalysis
   | Cost
   | DisjunctiveDemo
+  | FunctionName
   | StaticConstructorStallChecker
   | FragmentRetainsView
   | Impurity

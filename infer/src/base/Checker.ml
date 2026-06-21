@@ -17,6 +17,7 @@ type t =
   | ConfigImpactAnalysis
   | Cost
   | DisjunctiveDemo
+  | FunctionName
   | StaticConstructorStallChecker
   | FragmentRetainsView
   | Impurity
@@ -173,6 +174,15 @@ let config_unsafe checker =
       ; support= mk_support_func ~clang:Support ()
       ; short_documentation= "Demo of the disjunctive domain, used for testing."
       ; cli_flags= Some {deprecated= []; show_in_help= false}
+      ; enabled_by_default= false
+      ; activates= [] }
+  | FunctionName ->
+      { id= "function-name"
+      ; kind= UserFacing {title= "Function Name Checker"; markdown_body= ""}
+      ; support= mk_support_func ~clang:Support ~java:Support ()
+      ; short_documentation=
+          "Checks that functions returning a boolean have a name starting with 'Is'."
+      ; cli_flags= Some {deprecated= []; show_in_help= true}
       ; enabled_by_default= false
       ; activates= [] }
   | StaticConstructorStallChecker ->

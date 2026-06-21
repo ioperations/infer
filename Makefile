@@ -65,6 +65,7 @@ DIRECT_TESTS += \
   c_sil \
   c_starvation \
   c_topl \
+  cpp_boolean-function-naming \
   cpp_bufferoverrun \
   cpp_frontend \
   cpp_frontend-17 \
@@ -283,6 +284,7 @@ BUILD_SYSTEMS_TESTS += \
 
 DIRECT_TESTS += \
   java_annotreach \
+  java_boolean-function-naming \
   java_bufferoverrun \
   java_config-gating \
   java_dependencies \

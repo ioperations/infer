@@ -228,6 +228,10 @@ let all_checkers =
          let clang_validator = intraprocedural (SilValidation.checker Language.Clang) in
          let erlang_validator = intraprocedural (SilValidation.checker Language.Erlang) in
          [(java_validator, Java); (clang_validator, Clang); (erlang_validator, Erlang)] ) }
+  ; { checker= FunctionName
+    ; callbacks=
+        [(intraprocedural FunctionName.checker, Clang); (intraprocedural FunctionName.checker, Java)]
+    }
   ; { checker= SwiftObjCNullability
     ; callbacks= [(intraprocedural SwiftObjCNullabilityChecker.checker, Swift)] } ]
 
