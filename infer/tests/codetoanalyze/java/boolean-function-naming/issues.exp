@@ -1,0 +1,2 @@
+codetoanalyze/java/boolean-function-naming/BoolNaming.java, BoolNaming.notReady():boolean, 0, BOOLEAN_FUNCTION_NAME, no_bucket, WARNING, [Boolean-returning function BoolNaming.notReady() should start with `Is`.]
+codetoanalyze/java/boolean-function-naming/BoolNaming.java, BoolNaming.is_valid():boolean, 0, BOOLEAN_FUNCTION_NAME, no_bucket, WARNING, [Boolean-returning function BoolNaming.is_valid() should start with `Is`.]

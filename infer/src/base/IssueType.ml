@@ -384,6 +384,11 @@ let block_parameter_not_null_checked =
     ~user_documentation:[%blob "./documentation/issues/BLOCK_PARAMETER_NOT_NULL_CHECKED.md"]
 
 
+let bool_function_naming =
+  register ~category:LogicError ~id:"BOOLEAN_FUNCTION_NAME" Warning FunctionName
+    ~user_documentation:"Checks that functions returning a boolean have a name starting with 'Is'."
+
+
 let buffer_overrun_l1 =
   register ~category:NoCategory ~id:"BUFFER_OVERRUN_L1" Error BufferOverrunChecker
     ~user_documentation:[%blob "./documentation/issues/BUFFER_OVERRUN.md"]

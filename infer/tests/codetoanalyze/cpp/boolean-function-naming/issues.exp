@@ -1,0 +1,2 @@
+codetoanalyze/cpp/boolean-function-naming/BoolNaming.cpp, notReady, 0, BOOLEAN_FUNCTION_NAME, no_bucket, WARNING, [Boolean-returning function notReady() should start with `Is`.]
+codetoanalyze/cpp/boolean-function-naming/BoolNaming.cpp, is_valid, 0, BOOLEAN_FUNCTION_NAME, no_bucket, WARNING, [Boolean-returning function is_valid() should start with `Is`.]
