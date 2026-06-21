@@ -8,7 +8,7 @@
 open! IStd
 module F = Format
 
-let checker {IntraproceduralAnalysis.proc_desc; tenv; err_log} =
+let checker {IntraproceduralAnalysis.proc_desc; err_log} =
   let proc_name = Procdesc.get_proc_name proc_desc in
   let return_type = Procdesc.get_ret_type proc_desc in
   match return_type.desc with
