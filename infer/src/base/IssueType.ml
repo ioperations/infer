@@ -909,6 +909,13 @@ let retain_cycle_no_weak_info =
     ~user_documentation:[%blob "./documentation/issues/RETAIN_CYCLE.md"]
 
 
+let redundant_return_value =
+  register ~category:LogicError ~id:"REDUNDANT_RETURN_VALUE" Warning RedundantReturnValue
+    ~user_documentation:
+      "Detects functions where all return paths return the same value, suggesting the return type \
+       could be void."
+
+
 let scope_leakage =
   register ~category:SensitiveDataFlow ~enabled:true ~id:"SCOPE_LEAKAGE" Error ScopeLeakage
     ~user_documentation:[%blob "./documentation/issues/SCOPE_LEAKAGE.md"]

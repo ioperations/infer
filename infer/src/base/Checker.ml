@@ -30,6 +30,7 @@ type t =
   | ParameterNotNullChecked
   | Pulse
   | PurityAnalysis
+  | RedundantReturnValue
   | PurityChecker
   | RacerD
   | ResourceLeakLabExercise
@@ -318,6 +319,16 @@ let config_unsafe checker =
       ; short_documentation= "Thread safety analysis."
       ; cli_flags= Some {deprecated= []; show_in_help= true}
       ; enabled_by_default= true
+      ; activates= [] }
+  | RedundantReturnValue ->
+      { id= "redundant-return-value"
+      ; kind= UserFacing {title= "Redundant Return Value"; markdown_body= ""}
+      ; support= mk_support_func ~clang:Support ~java:Support ()
+      ; short_documentation=
+          "Detects functions where all return paths return the same value, suggesting the return \
+           type could be void."
+      ; cli_flags= Some {deprecated= []; show_in_help= true}
+      ; enabled_by_default= false
       ; activates= [] }
   | ResourceLeakLabExercise ->
       { id= "resource-leak-lab"

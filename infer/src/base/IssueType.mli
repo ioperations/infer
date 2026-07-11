@@ -295,6 +295,8 @@ val retain_cycle : t
 
 val retain_cycle_no_weak_info : t
 
+val redundant_return_value : t
+
 val scope_leakage : t
 
 val self_in_block_passed_to_init : t

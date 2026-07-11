@@ -29,6 +29,7 @@ type t =
   | ParameterNotNullChecked
   | Pulse
   | PurityAnalysis
+  | RedundantReturnValue
   | PurityChecker
   | RacerD
   | ResourceLeakLabExercise

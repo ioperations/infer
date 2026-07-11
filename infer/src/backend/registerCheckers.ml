@@ -232,6 +232,10 @@ let all_checkers =
     ; callbacks=
         [(intraprocedural FunctionName.checker, Clang); (intraprocedural FunctionName.checker, Java)]
     }
+  ; { checker= RedundantReturnValue
+    ; callbacks=
+        [ (intraprocedural RedundantReturnValueChecker.checker, Clang)
+        ; (intraprocedural RedundantReturnValueChecker.checker, Java) ] }
   ; { checker= SwiftObjCNullability
     ; callbacks= [(intraprocedural SwiftObjCNullabilityChecker.checker, Swift)] } ]
 
